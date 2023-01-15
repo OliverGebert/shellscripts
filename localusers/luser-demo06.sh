@@ -20,3 +20,11 @@ then
   echo "usage: ${0} USER_NAME [USER_NAME]..."
   exit 1
 fi
+# generate and disply a pwd for each parameter
+
+for USER_NAME in "${@}" # @ creates a list of all parameters, whereas * would provide all parameters in concatenated in one argument
+do
+  PWD=$(date +%s%N | sha256sum | head -c48)
+  echo "${USER_NAME}: ${PWD}"
+done
+

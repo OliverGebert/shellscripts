@@ -5,4 +5,4 @@ luser_demo02.sh
 luser_demo03.sh
 luser_demo04.sh
 luser_demo05.sh
-luser_demo06.sh - positional parameters and arguments to assign random pwd to user
+luser_demo06.sh - positional parameters and arguments to assign random pwd to use. ${@} to use alle paramters as a list
