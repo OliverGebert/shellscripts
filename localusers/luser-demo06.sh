@@ -7,7 +7,7 @@ echo "you executed this command: ${0}"
 
 # display the path and filename of the script
 
-echo "you used $(dirname ${0}) as the path ato the $(basename ${0}) script."
+echo "you used $(dirname ${0}) as the path to the $(basename ${0}) script."
 
 # tell the user how many arguments they passed in 
 NUMBER_OF_PARAMS="${#}"
