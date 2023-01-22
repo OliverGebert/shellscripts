@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # this script creates an account on the local system
-# You will be prompted for the account name and pwd
+# You will be prompted for the account name and password
 
 # check script execution with superuser
 
@@ -20,20 +20,11 @@ then
   USER_NAME=${1}
   COMMENT=${2}
 else
-  echo "You have to enter: add-new-local-user.sh USER_NAME COMMENT"
+  echo "Usage: ${0} USER_NAME COMMENT"
   exit 1
 fi
 
 PASSWORD=$(echo "${RANDOM}${RANDOM}" | base64 | head -c10)
-
-# ask for user name
-# read -p 'Enter the user name to create: ' USER_NAME
-
-# ask for the real name
-# read -p 'Enter the name of the person who this account is for: ' COMMENT
-
-# ask for the pwd
-# read -p 'Enter pwd to use for the account: ' PWD
 
 # create user and check if succeeded, otherwise exit script
 useradd -c "${COMMENT}" -m ${USER_NAME}
@@ -55,4 +46,4 @@ fi
 passwd -e ${USER_NAME}
 
 # display account details and host information
-echo "Login: " ${USER_NAME} "Comment: " ${COMMENT} "PWD: " ${PASSWORD} "Created on: " $(hostname -s)
+echo -e "\nLogin: " ${USER_NAME} "\nComment: " ${COMMENT} "\nPASSWORD: " ${PASSWORD} "\nCreated on: " $(hostname -s) "\n"
