@@ -14,7 +14,7 @@ read LINE < ${FILE}
 # redirect STDOUT to a file using FD1, overwritng the file
 
 head -n3 /etc/passwd 1> ${FILE}
-echo 
+echo
 echo "LINE contains: ${LINE}"
 cat ${FILE}
 
@@ -28,7 +28,7 @@ cat ${ERR_FILE}
 
 # Redirect STDOUT and SDTERR to a file
 head -n3 /etc/passwd /fakefile &> ${FILE}
-echo 
+echo
 echo "FILE contains SDTOUT & STDERR:"
 cat ${FILE}
 
@@ -42,8 +42,8 @@ echo
 echo "This is STDERR!" >&2
 
 # Discard STDOUT
-echo 
-echo "Discrd STDOUT"
+echo
+echo "Discard STDOUT"
 head -n3 /etc/passwd /fakefile > /dev/null
 
 # Clean up
