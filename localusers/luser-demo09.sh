@@ -2,14 +2,12 @@
 
 # This scrip demonsatres the case statement
 
-if [[ "${1}" = 'start' ]]
-then
-  echo "starting"
-elif [[ "${1}" = 'stop' ]]
-then
-  echo "stopping"
-else
-  echo 'no match found' >&2
-  exit 1
-fi
-
+case ${1} in
+    start|Start) echo "starting" ;;
+    stop|Stop) echo "stopping" ;;
+    Status|status|state|State) echo "status" ;;
+    *)
+        echo "wrong parameter" >&2
+        exit 1
+    ;;
+esac
