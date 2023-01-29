@@ -8,5 +8,8 @@ This folder contains bash scripts for usage on localhost
 - luser_demo06.sh - positional parameters and arguments to assign random pwd to use ${@} to use all paramters as a list
 - luser-demo07.sh - use WHILE Do Doing loop
 - luser-demo08.sh - redirect STDOUT, STDERR, with > >> &> &|
+- luser-demo09.sh - use case command instead of nested if
+- luser-demo10.sh - use functions
 
-* **add-new-local-user.sh - exercise script for own usag, bringing the demos together**
+- **backup.sh - script to backup a given file to /var/tmp and log the status depending on log level**
+- **add-new-local-user.sh - exercise script for own usag, bringing the demos together**
