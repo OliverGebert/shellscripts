@@ -10,6 +10,7 @@ This folder contains bash scripts for usage on localhost
 - luser-demo08.sh - redirect STDOUT, STDERR, with > >> &> &|
 - luser-demo09.sh - use case command instead of nested if
 - luser-demo10.sh - use functions
+- luser-demo11-sh - use getops to parse option passed to the bash script
 
 - **backup.sh - script to backup a given file to /var/tmp and log the status depending on log level**
 - **add-new-local-user.sh - exercise script for own usag, bringing the demos together**
