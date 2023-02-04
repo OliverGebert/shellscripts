@@ -9,7 +9,8 @@
 LENGTH=48
 
 usage(){
-    echo "usage: ${0} [vs] [l length]" >&2
+    echo "usage of ${0} not correct, present syntax to user" >&2
+    echo "usage: ${0} [vs] [l length]"
     echo "generate a random password"
     echo " -l LENGTH specify password length 8-16"
     echo " -s .      add special character"
@@ -32,9 +33,18 @@ do
         v) VERBOSE='true'; verbose 'Verbose mode on' ;;
         l) LENGTH="${OPTARG}" ;;
         s) USE_SPECIAL_CHAR='true' ;;
-        ?) usage
+        ?) verbose 'unknown argument'; usage
     esac
 done
+
+# use OPTIND as pointer to next argument position and shift all arguments one position less to left to have non arguments as remainer
+shift "$(( OPTIND -1 ))"
+# give error message if any more arguments are provided after the parsing of getops
+if [[ "${#}" -gt 0 ]]
+then
+    verbose 'to many arguments:'
+    usage
+fi
 
 # start actual password generation script
 verbose 'Start generating a password'
