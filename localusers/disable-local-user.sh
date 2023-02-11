@@ -38,6 +38,7 @@ then
     usage
 fi
 
+
 # evaluate script options
 VERBOSE='false'
 USER_DELETE='false'
