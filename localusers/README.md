@@ -16,3 +16,4 @@ This folder contains bash scripts for usage on localhost
 - **disable-local-user.sh - script to disable or delete a local user**
 - **backup.sh - script to backup a given file to /var/tmp and log the status depending on log level**
 - **add-new-local-user.sh - exercise script for own usag, bringing the demos together**
+- **show-attacker.sh - script uses awk, cut, uniq and sort to analyse http log file and print most used IP adresses fr login failures**
