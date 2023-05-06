@@ -13,15 +13,6 @@ usage(){
     exit 1
 }
 
-# check if at least one argument for commit message is given, exit if less than 1 argument with usage statement
-if [[ "${#}" -lt 1 ]]
-then
-    usage
-else
-    MESSAGE=${1}
-    echo $MESSAGE
-fi
-
 # evaluate script options
 VERBOSE='false'
 while getopts v OPTION
@@ -31,6 +22,15 @@ do
         ?) echo 'unknown argument'; usage
     esac
 done
+
+# check if at least one argument for commit message is given, exit if less than 1 argument with usage statement
+if [[ "${#}" -lt 1 ]]
+then
+    usage
+else
+    MESSAGE=${1}
+    echo $MESSAGE
+fi
 
 # provide git status
 echo "*** git status:"
