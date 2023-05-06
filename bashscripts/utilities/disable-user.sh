@@ -29,7 +29,6 @@ if [[ "${UID}" -ne "${UID_TEST}" ]]
 then
     echo -e "\tYour UID is ${UID}, not root, you need to execute this script with root. Script exits"
     usage
-    exit 1
 fi
 
 # check if at least one argument is given, exit if less than 1 argument with usage statement
