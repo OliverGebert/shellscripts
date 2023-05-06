@@ -23,6 +23,9 @@ do
     esac
 done
 
+# use OPTIND as pointer to next argument position and shift all arguments one position less to left to have non arguments as remainer
+shift "$(( OPTIND -1 ))"
+
 # check if at least one argument for commit message is given, exit if less than 1 argument with usage statement
 if [[ "${#}" -lt 1 ]]
 then
