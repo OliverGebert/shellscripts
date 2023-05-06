@@ -45,3 +45,5 @@ There are three VMs configured:
 - to halt the virtual machine: `vagrant halt [VM]`
 
 - to destroy the VM: `vagrant destroy [VM]`
+
+- to show status of all VMs in Vagrantfile: `vagrant status`
