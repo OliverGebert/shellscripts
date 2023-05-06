@@ -57,3 +57,6 @@ git commit -m "${MESSAGE}"
 echo "*** git push"
 git push
 
+# close with git status
+echo "*** git status"
+git status
