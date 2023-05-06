@@ -35,6 +35,12 @@ done
 # provide git status
 echo "*** git status:"
 git status
+if [[ "${?}" -eq 0 ]]
+then
+    echo "*** git status worked"
+else
+    echo "*** git status not work"
+fi
 
 # add all files to current repo
 echo "*** git add ."
