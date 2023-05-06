@@ -46,3 +46,5 @@ git commit -m "${MESSAGE}"
 
 # push comitted files to main branch
 echo "*** git push"
+git push
+
