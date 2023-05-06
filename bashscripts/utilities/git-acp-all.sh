@@ -6,7 +6,7 @@
 
 # provide usage statement and exit 1
 usage(){
-    echo "usage: ${0} [v] [MESSAGE]"
+    echo "usage: ${0} [v] MESSAGE"
     echo "add, commit and push current repo for all files"
     echo "use given commit message"
     echo " -v .      be verbose"
