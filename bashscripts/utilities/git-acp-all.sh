@@ -33,16 +33,16 @@ do
 done
 
 # provide git status
-echo "git status:"
+echo "*** git status:"
 git status
 
 # add all files to current repo
-echo "git add ."
+echo "*** git add ."
 git add .
 
 # commit files with given comment
-echo "git commit -m ${MESSAGE}"
+echo "*** git commit -m ${MESSAGE}"
 git commit -m "${MESSAGE}"
 
 # push comitted files to main branch
-echo "git push"
+echo "*** git push"
