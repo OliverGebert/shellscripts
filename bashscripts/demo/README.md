@@ -21,7 +21,8 @@ By default vagrant operates on all boxes defined in the VAGRANTFILE. If [VM] is 
 
 There are three VMs configured:
 
-    config.vm.box = "jasonc/centos7"
+```
+config.vm.box = "jasonc/centos7"
 
     config.vm.define "admin01" do |admin01|
         admin01.vm.hostname = "admin01"
@@ -37,6 +38,8 @@ There are three VMs configured:
         server02.vm.hostname = "server02"
         server02.vm.network "private_network", ip: "10.9.8.12"
     end
+
+```
 
 - to list options: `vagrant`
 
