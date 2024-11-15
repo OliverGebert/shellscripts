@@ -53,6 +53,8 @@ config.vm.box = "jasonc/centos7"
 
 - to remote login via ssh, requires [VM]: `vagrant ssh [VM]`
 
+- to change into connected directory of VM: `cd /vagrant`
+
 - to halt the virtual machine: `vagrant halt [VM]`
 
 - to destroy the VM: `vagrant destroy [VM]`

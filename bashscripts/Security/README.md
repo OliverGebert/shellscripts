@@ -8,12 +8,14 @@ By default vagrant operates on all boxes defined in the VAGRANTFILE. If [VM] is 
 
 There is one VM configured:
 
-config.vm.box = "kalilinux/rolling"
-
 ```
-config.vm.define "kali01" do |kali01|
-admin01.vm.hostname = "kali01"
-admin01.vm.network "private_network", ip: "10.9.8.10"
+Vagrant.configure("2") do |config|
+    config.vm.box = "kalilinux/rolling"
+
+    config.vm.define "kali01" do |kali01|
+        kali01.vm.hostname = "kali01"
+        kali01.vm.network "private_network", ip: "10.9.8.10"
+    end
 end
 ```
 
@@ -28,6 +30,10 @@ end
 - to bring up a VMs: `vagrant up [VM]`
 
 - to remote login via ssh, requires [VM]: `vagrant ssh [VM]`
+
+- change into connected VM directory: `cd /vagrant`
+
+- login with: `vagrant:vagrant`
 
 - to halt the virtual machine: `vagrant halt [VM]`
 
