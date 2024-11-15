@@ -7,8 +7,8 @@ VERBOSE='false'
 while getopts v OPTION
 do
     case ${OPTION} in
-        v) VERBOSE='true'; echo 'Verbose mode on' ;
-        ?) echo 'unknown argument';
+        v) VERBOSE='true'; echo 'Verbose mode on' ;;
+        ?) echo 'unknown argument';;
     esac
 done
 
